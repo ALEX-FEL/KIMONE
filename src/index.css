@@ -18,13 +18,9 @@
 }
 
 @layer utilities {
-  .animate-slide-up {
-    animation: slideUp 0.3s ease-out;
-  }
-
-  .animate-scale-up {
-    animation: scaleUp 0.3s ease-out;
-  }
+  .animate-slide-up { animation: slideUp 0.3s ease-out; }
+  .animate-scale-up { animation: scaleUp 0.3s ease-out; }
+  .animate-float { animation: float 6s ease-in-out infinite; }
 
   .line-clamp-1 {
     display: -webkit-box;
@@ -39,57 +35,44 @@
     -webkit-box-orient: vertical;
     overflow: hidden;
   }
+
+  /* African cultural pattern backgrounds */
+  .pattern-kente {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Cpolygon points='20,2 38,11 38,29 20,38 2,29 2,11' fill='none' stroke='%23D4940F' stroke-width='0.8' stroke-opacity='0.25'/%3E%3Cpolygon points='20,8 32,14 32,26 20,32 8,26 8,14' fill='none' stroke='%232B6B8A' stroke-width='0.6' stroke-opacity='0.2'/%3E%3C/svg%3E");
+  }
+
+  .pattern-adinkra {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cpolygon points='30,5 55,50 5,50' fill='none' stroke='%23D4940F' stroke-width='1' stroke-opacity='0.15'/%3E%3Cpolygon points='30,15 45,45 15,45' fill='none' stroke='%234A8C5C' stroke-width='0.8' stroke-opacity='0.15'/%3E%3C/svg%3E");
+  }
+
+  .pattern-tribal {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cpath d='M0 40 L20 20 L40 40 L20 60 Z' fill='none' stroke='%23D4940F' stroke-width='1' stroke-opacity='0.12'/%3E%3Cpath d='M40 40 L60 20 L80 40 L60 60 Z' fill='none' stroke='%232B6B8A' stroke-width='1' stroke-opacity='0.12'/%3E%3Cpath d='M20 0 L40 20 L20 40 L0 20 Z' fill='none' stroke='%234A8C5C' stroke-width='1' stroke-opacity='0.12'/%3E%3Cpath d='M60 0 L80 20 L60 40 L40 20 Z' fill='none' stroke='%23C4622D' stroke-width='1' stroke-opacity='0.12'/%3E%3C/svg%3E");
+  }
 }
 
 @keyframes slideUp {
-  from {
-    transform: translateY(100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+  from { transform: translateY(100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
 }
 
 @keyframes scaleUp {
-  from {
-    transform: scale(0.95);
-    opacity: 0;
-  }
-  to {
-    transform: scale(1);
-    opacity: 1;
-  }
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: #f1f5f9;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb {
-  background: #cbd5e1;
-  border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #94a3b8;
-}
+::-webkit-scrollbar { width: 8px; height: 8px; }
+::-webkit-scrollbar-track { background: #f1f5f9; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
 
 /* Focus styles */
-:focus-visible {
-  outline: 2px solid #f59e0b;
-  outline-offset: 2px;
-}
+:focus-visible { outline: 2px solid #D4940F; outline-offset: 2px; }
 
 /* Selection */
-::selection {
-  background-color: rgba(245, 158, 11, 0.2);
-}
+::selection { background-color: rgba(212, 148, 15, 0.2); }
